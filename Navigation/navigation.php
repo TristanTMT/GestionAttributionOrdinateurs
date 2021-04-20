@@ -11,7 +11,6 @@
     <header class="header_nav">
             <div id="logo_and_titre"> 
             <a href="index.php"> <img id="logo" src="images/desktop.png"> </a>
-                <!-- <h1 id="titre">Gestion d’attribution d’ordinateurs</h1>      -->
             </div>
             <nav>
                 <span> <a href="gestion_utilisateurs.php"> Utilisateurs </a></span>

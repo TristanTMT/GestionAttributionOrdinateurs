@@ -92,7 +92,7 @@ require_once("config.php");
 			
 			<!-- Faire attribution -->
             <div class="text_Ajout">
-                <a href="php/reservation/faire_attribution.php"> <img id="icon_modif" src="images/icone_modif.png"> Faire une attribution </a>
+                <a href="php/reservation/faire_attribution.php"> <img id="icon_modif" src="images/icone_modif.png"> Faire une réservation </a>
             </div>
         </div>    
     </div>

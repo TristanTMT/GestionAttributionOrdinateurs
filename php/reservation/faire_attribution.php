@@ -35,7 +35,7 @@ require_once("../../config.php");
 <div class="formcontainer">
     <div class="container">
 
-        <form action="attribuer_U_O.php?reservation=ordinateur" method="post">
+        <form action="reservation.php?reservation=ordinateur" method="post">
 
                 <h2> Liste des réservations: </h2>
 
@@ -46,13 +46,13 @@ require_once("../../config.php");
 						<option>Utilisateurs</option>
 						
 						<!-- Selectione tout les utilisateurs disponible cad ceux qui n'utilise pas d'ordinateur  WHERE use_computer = '0'-->
-						<?php $select_utilisateurs_disponible = mysqli_query($db, "SELECT * FROM users"); 
+						<?php $select_user_available = mysqli_query($db, "SELECT * FROM users"); 
 						
 						/* Pour i allant de 1 au nombre totale de lignes de la table utilisateurs
 							affiche tout les utilisateurs sous forme liste deroulante (nom, prenom)
 						*/
-						for( $i=1; $i<=mysqli_num_rows($select_utilisateurs_disponible); $i++ ) {
-							$liste_table_utilisateurs = mysqli_fetch_array($select_utilisateurs_disponible);
+						for( $i=1; $i<=mysqli_num_rows($select_user_available); $i++ ) {
+							$liste_table_utilisateurs = mysqli_fetch_array($select_user_available);
 							echo '<option value="'.$liste_table_utilisateurs['id_user'].'">'.htmlspecialchars_decode($liste_table_utilisateurs['lastName_user'], ENT_QUOTES).', '.htmlspecialchars_decode($liste_table_utilisateurs['firstName_user'], ENT_QUOTES).'</option>';
 						} ?>
 					</select>
@@ -60,8 +60,6 @@ require_once("../../config.php");
  				</span>
  
 				<span class="container-liste">
-
-					<!-- Horaire -->
 					<select name="horaire_attribuer">
 					  	<option>Horaires</option>
 						<option value="08:30">08:30</option>
@@ -86,10 +84,8 @@ require_once("../../config.php");
 				</span>
 				
 				<span class="container-liste">
-
-						<!-- Date -->
+					<!-- Date -->
 					<input  type="date" id="calendrier" name="date_attribuer" value="2021-01-01" min="2021-01-01">
-					
 				</span>
 
 
@@ -100,12 +96,12 @@ require_once("../../config.php");
 							<option>Id Ordinateur</option>
 							
 							<!-- Selectionne tout les ordinateurs qui ne sont pas occuper par un utlisateurs. -->
-							<?php $select_ordinateurs_non_occuper = mysqli_query($db, "SELECT * FROM computers WHERE used_computer = 'Non'"); 
+							<?php $select_computer_available = mysqli_query($db, "SELECT * FROM computers WHERE used_computer = 'Non'"); 
 							
 							/* Pour j allant de 1 au nombre totale de ligne de la table ordinateurs
 							affiche tout les ordinateurs sous forme liste deroulante (nom ordi) */
-							for( $j=1; $j<=mysqli_num_rows($select_ordinateurs_non_occuper); $j++ ) {
-								$liste_table_ordinateurs = mysqli_fetch_array($select_ordinateurs_non_occuper);
+							for( $j=1; $j<=mysqli_num_rows($select_computer_available); $j++ ) {
+								$liste_table_ordinateurs = mysqli_fetch_array($select_computer_available);
                                 echo '<option value="'.$liste_table_ordinateurs['id_computer'].'">Ordinateur '
                                 .$liste_table_ordinateurs['name_computer'].'</option>';
 							} ?>

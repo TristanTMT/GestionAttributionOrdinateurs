@@ -25,8 +25,9 @@
 </head>
 <body>
 
-    <main> 
-        <h1 id="h1-titre"> Gestion d’attribution d’ordinateurs </h1>
+    <main class="container-index"> 
+        <h1 id="h1-titre"> Gestion d’attribution d’ordinateurs</h1>
+        <img class="logo-simplon" src="/images/auton31750.png" alt="Simplon Réunion">
     </main>
     
 </body>
