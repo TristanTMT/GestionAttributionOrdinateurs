@@ -27,7 +27,6 @@ require_once("../../config.php");
 	}
 
 	</style>
-	
 </head>
 
 <body class="design-page-body">
