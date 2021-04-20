@@ -40,7 +40,7 @@ Vous devez avoir PHP et MySQL d'installer sur votre machine
 
 1 - Cloner ce repository  
 2 - Créer une base de données dans MySQL nommée "test_simplon"  
-3 - Importer le fichier "gestion_attribution_ordinateurs.sql" dans votre BDD "test_simplon"  
+3 - Importer le fichier "reservationOrdinateurSimplon.sql" dans votre BDD "test_simplon"  
 4 - Mettre vos infos dans le fichier "config.php" comme le MDP :   
 ````
 $db=mysqli_connect("localhost","root","process.env.YOUR_PASSWORD","test_simplon"); 
