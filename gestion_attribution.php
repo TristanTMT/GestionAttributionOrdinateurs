@@ -61,7 +61,7 @@ require_once("config.php");
 					{
 						
 						/*La fonction "mysqli_fetch_array" va retourner une ligne de résultat sous la forme d'un tableau.
-							les valeurs sont prit grâce au différentes requêtes dans le fichier "attribuer_U_O"*/
+							les valeurs sont prit grâce au différentes requêtes dans le fichier "reservation"*/
 			  			$table_attributions = mysqli_fetch_array($liste_table_attributions);
 			  			?>
 			  			<tr>
